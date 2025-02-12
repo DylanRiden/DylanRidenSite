@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DylanRidenSite.Web.Client.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DylanRidenSite.Web.Client.FakeDataClient", "DotNet\src\DylanRidenSite.Web.Client.FakeDataClient\DylanRidenSite.Web.Client.FakeDataClient.csproj", "{DFBEDCA3-FEEC-40E2-89EF-DFE77C41B52D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DylanRidenSite.Domain", "DotNet\src\DylanRidenSite.Domain\DylanRidenSite.Domain.csproj", "{E063FEEB-62BA-4205-8BF0-A7A0BC1B34DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,11 +36,16 @@ Global
 		{DFBEDCA3-FEEC-40E2-89EF-DFE77C41B52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBEDCA3-FEEC-40E2-89EF-DFE77C41B52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBEDCA3-FEEC-40E2-89EF-DFE77C41B52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E063FEEB-62BA-4205-8BF0-A7A0BC1B34DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E063FEEB-62BA-4205-8BF0-A7A0BC1B34DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E063FEEB-62BA-4205-8BF0-A7A0BC1B34DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E063FEEB-62BA-4205-8BF0-A7A0BC1B34DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{134C60A8-C4D1-4D02-960C-A833BACF4FDE} = {E1F79208-CAA9-46E1-B423-2F3D576FE94A}
 		{54399A84-6361-4543-8F27-CF39D152EAE2} = {134C60A8-C4D1-4D02-960C-A833BACF4FDE}
 		{924E7E13-3FB0-49D6-87CD-B6AC036EDB68} = {134C60A8-C4D1-4D02-960C-A833BACF4FDE}
 		{DFBEDCA3-FEEC-40E2-89EF-DFE77C41B52D} = {134C60A8-C4D1-4D02-960C-A833BACF4FDE}
+		{E063FEEB-62BA-4205-8BF0-A7A0BC1B34DC} = {134C60A8-C4D1-4D02-960C-A833BACF4FDE}
 	EndGlobalSection
 EndGlobal
