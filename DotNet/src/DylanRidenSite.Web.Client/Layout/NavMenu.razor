@@ -1,16 +1,12 @@
-﻿@inject NavigationManager Navigation
-
-<!-- Apply the 'nav-container' class for styling -->
-<div class="nav-container">
-    <FluentAnchor Appearance="Appearance.Hypertext" class="nav-link" onclick="@(NavigateHome)">
+﻿<div class="nav-container">
+    <FluentAnchor Appearance="Appearance.Hypertext" class="nav-link" Href="/">
         Home
     </FluentAnchor>
 
-    <FluentAnchor Appearance="Appearance.Hypertext" class="nav-link" onclick="@(NavigateToProjects)">
+    <FluentAnchor Appearance="Appearance.Hypertext" class="nav-link" Href="/projects">
         Projects
     </FluentAnchor>
-
-
+    
     <FluentAnchor Appearance="Appearance.Hypertext" class="nav-link nav-resume" Href="/resources/dylan-riden-cv-02-2025.pdf" target="_blank" rel="noopener noreferrer">
         <span>
             Resume/CV
@@ -20,16 +16,3 @@
  
     
 </div>
-
-@code {
-    
-    private void NavigateToProjects()
-    {
-        Navigation.NavigateTo("/projects");
-    }
-
-    private void NavigateHome()
-    {
-        Navigation.NavigateTo("/");
-    }
-}

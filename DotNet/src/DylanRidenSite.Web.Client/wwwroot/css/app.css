@@ -156,12 +156,12 @@ a, .btn-link {
     align-items: center;
 }
 
-fluent-anchor.nav-resume::part(control) {
+fluent-anchor.nav-link::part(control) {
     color: white !important;
     text-decoration: none !important;
 }
 
-fluent-anchor.nav-resume:hover::part(control) {
+fluent-anchor.nav-link:hover::part(control) {
     color: #ffdd57 !important;
     text-decoration: none !important;
 }
