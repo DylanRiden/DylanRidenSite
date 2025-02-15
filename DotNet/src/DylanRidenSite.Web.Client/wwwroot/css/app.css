@@ -151,7 +151,7 @@ a, .btn-link {
 .nav-container {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
 }
