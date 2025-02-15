@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNet", "DotNet", "{E1F79208-CAA9-46E1-B423-2F3D576FE94A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{134C60A8-C4D1-4D02-960C-A833BACF4FDE}"
+	ProjectSection(SolutionItems) = preProject
+		DotNet\src\icons8-linkedin-48.svg = DotNet\src\icons8-linkedin-48.svg
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DylanRidenSite.Web.Client", "DotNet\src\DylanRidenSite.Web.Client\DylanRidenSite.Web.Client.csproj", "{54399A84-6361-4543-8F27-CF39D152EAE2}"
 EndProject

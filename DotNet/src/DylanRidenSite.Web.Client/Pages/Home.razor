@@ -1,7 +1,62 @@
 ﻿@page "/"
+@using DylanRidenSite.Web.Client.Components.Home
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Dylan Riden - Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div style="display: flex; justify-content: center; align-items: center; padding: 60px 20px;">
+    <div style="max-width: 800px; text-align: center;">
 
-Welcome to your new app.
+        <h2 style="font-size: 2em; font-weight: bold; margin-bottom: 15px;">Hi, I'm Dylan Riden 👋</h2>
+
+        <p style="font-size: 1.1em; line-height: 1.6; color: #555;">
+            Experienced software engineer specializing in <strong>scalable, event-driven systems</strong> using
+            <strong>.NET Core, C#, and Azure</strong>. Passionate about optimizing application performance, building cloud infrastructure,
+            and leading agile development to deliver <strong>high-performance, secure, and scalable solutions</strong>.
+        </p>
+
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 1.5em; margin-bottom: 10px;">Skills & Technologies</h3>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 10px;">
+
+                <SkillChip SkillName="C#"/>
+                <SkillChip SkillName=".NET Core 9"/>
+                <SkillChip SkillName="EF Core 9"/>
+                <SkillChip SkillName="PostgreSQL"/>
+                <SkillChip SkillName="REST API Development"/>
+                <SkillChip SkillName="Microservices Development"/>
+                <SkillChip SkillName="Angular & TypeScript"/>
+                <SkillChip SkillName="Azure Cloud Infrastructure"/>
+                <SkillChip SkillName="Azure DevOps"/>
+
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px;">
+            <a href="/projects"
+               style="padding: 12px 20px; border-radius: 5px; text-decoration: none; font-size: 1em; font-weight: bold; 
+                      background-color: #0366d6; color: white; transition: 0.3s;">
+                View My Projects
+            </a>
+            <a href="/resources/dylan-riden-cv-02-2025.pdf" target="_blank" rel="noopener noreferrer"
+               style="padding: 12px 20px; border-radius: 5px; text-decoration: none; font-size: 1em; font-weight: bold; 
+                      background-color: #f5f5f5; color: #0366d6; border: 1px solid #0366d6; transition: 0.3s;">
+                Download Resume
+            </a>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <h3 style="font-size: 1.5em; margin-bottom: 10px;">Connect with Me</h3>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="https://www.linkedin.com/in/dylan-riden-1057061b5/" target="_blank" rel="noopener noreferrer"
+                   style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px;">
+                    <img src="resources/icons/linkedin.svg" alt="LinkedIn" style="width: 100%; height: 100%;" />
+                </a>
+                <a href="https://github.com/DylanRiden/" target="_blank" rel="noopener noreferrer"
+                   style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px;">
+                    <img src="resources/icons/github.svg" alt="GitHub" style="width: 100%; height: 100%;" />
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

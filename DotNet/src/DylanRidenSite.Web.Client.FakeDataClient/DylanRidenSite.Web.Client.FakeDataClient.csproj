@@ -11,4 +11,12 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\DylanRidenSite.Domain\DylanRidenSite.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="PortfolioItems\" />
+    </ItemGroup>
+
 </Project>

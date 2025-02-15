@@ -2,5 +2,5 @@
 
 public interface IDomainEntity
 {
-    public int Id { get; }
+    public short Id { get; }
 }
