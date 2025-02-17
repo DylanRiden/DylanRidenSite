@@ -1,8 +1,8 @@
 using DylanRidenSite.Domain.PortfolioItems;
 
-namespace DylanRidenSite.Web.Client.FakeDataClient.Infrastructure.Services;
+namespace DylanRidenSite.Web.Client.Core.Services;
 
-public interface IPortfolioItemService
+public interface IPortfolioItemsService
 {
     public Task Create(PortfolioItem portfolioItem);
     public Task<IReadOnlyList<PortfolioItem>> GetAll();

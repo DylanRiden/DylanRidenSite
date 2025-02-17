@@ -1,4 +1,3 @@
-@import '/_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css';
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -156,28 +155,34 @@ a, .btn-link {
     align-items: center;
 }
 
-fluent-anchor.nav-link::part(control) {
-    color: white !important;
-    text-decoration: none !important;
-}
-
-fluent-anchor.nav-link:hover::part(control) {
-    color: #ffdd57 !important;
-    text-decoration: none !important;
-}
-
-
 .nav-link {
     text-decoration: none;
-    color: white !important; 
+    color: white;
     font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
+    display: inline-block;
 }
 
-.nav-link:hover {
-    color: #ffdd57;
+a.nav-link:hover,
+a.nav-link:focus {
+    color: #ffdd57 !important;
+}
+
+.nav-link,
+.nav-link:visited,
+.nav-link:active,
+fluent-anchor.nav-link::part(control) {
+    color: white !important;
+    text-decoration: none !important; 
+}
+
+.nav-link:hover,
+.nav-link:focus,
+fluent-anchor.nav-link:hover::part(control),
+fluent-anchor.nav-link:focus::part(control) {
+    color: #ffdd57 !important;
 }
 
 .nav-resume {
@@ -185,7 +190,6 @@ fluent-anchor.nav-link:hover::part(control) {
     align-items: center;
     gap: 5px;
 }
-
 
 .nav-emoji {
     height: 1.2em;

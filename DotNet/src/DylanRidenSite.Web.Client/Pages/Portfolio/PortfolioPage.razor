@@ -1,0 +1,74 @@
+﻿@page "/portfolio"
+@using DylanRidenSite.Domain.PortfolioItems
+@using DylanRidenSite.Web.Client.Components
+@using DylanRidenSite.Web.Client.Core.Services
+@inject IPortfolioItemsService Service;
+@inject ILogger<PortfolioPage> Logger;
+
+<PageTitle>Dylan Riden - Portfolio</PageTitle>
+
+<h1 style="text-align: center; margin-bottom: 1rem;">My Projects</h1>
+
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; padding: 1rem;">
+    @switch (PageState)
+    {
+        case PortfolioPageState.Loading:
+            <div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+                <FluentProgressRing />
+            </div>
+            break;
+
+        case PortfolioPageState.LoadedWithData:
+            <div style="width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 1.5rem;">
+                @foreach (var item in PortfolioItems!)
+                {
+                    <div style="width: 100%;">
+                        <PortfolioListItem PortfolioItem="@item" />
+                    </div>
+                }
+            </div>
+            break;
+
+        case PortfolioPageState.LoadedNoData:
+            <div style="text-align: center; padding: 2rem;">
+                <h2>No projects available.</h2>
+                <p>Check back later for updates!</p>
+            </div>
+            break;
+            
+        case PortfolioPageState.Error:
+        default:
+            <div style="text-align: center; padding: 2rem; color: red;">
+                <h2>Error loading projects.</h2>
+                <p>Please try again later.</p>
+            </div>
+            break;
+    }
+</div>
+
+@code {
+    private PortfolioPageState PageState { get; set; } = PortfolioPageState.Loading;
+    
+    private IReadOnlyList<PortfolioItem>? PortfolioItems { get; set; } = null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await Refresh();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task Refresh()
+    {
+        try
+        {
+            PageState = PortfolioPageState.Loading;
+            PortfolioItems = await Service.GetAll();
+            PageState = PortfolioItems.Any() ? PortfolioPageState.LoadedWithData : PortfolioPageState.LoadedNoData;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex.Message);
+            PageState = PortfolioPageState.Error;
+        }
+    }
+}

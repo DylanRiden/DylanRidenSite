@@ -12,11 +12,14 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\DylanRidenSite.Web.Client.Core\DylanRidenSite.Web.Client.Core.csproj" />
       <ProjectReference Include="..\DylanRidenSite.Domain\DylanRidenSite.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="PortfolioItems\" />
+      <Reference Include="Microsoft.AspNetCore.Components">
+        <HintPath>..\..\..\..\..\.nuget\packages\microsoft.aspnetcore.components\8.0.13\lib\net8.0\Microsoft.AspNetCore.Components.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

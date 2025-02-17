@@ -1,5 +1,37 @@
-﻿<h3>PortfolioItem</h3>
+﻿@using DylanRidenSite.Domain.PortfolioItems
+@inject IJSRuntime Runtime
+
+<FluentCard Style="display: flex; align-items: center; padding: 1.5rem; width: 100%; max-width: 1000px; min-height: 260px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+    @if (PortfolioItem.ImageRef is not null)
+    {
+        <img src="@PortfolioItem.ImageRef.ToString()" alt="@PortfolioItem.Title"
+             style="width: 500px; height: 250px; object-fit: cover; border-radius: 8px; margin-right: 2rem;" />
+    }
+
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <h3 style="margin: 0; font-size: 1.75rem;">@PortfolioItem.Title</h3>
+        <p style="margin: 0.75rem 0; font-size: 1.1rem; color: #444; line-height: 1.6;">
+            @PortfolioItem.ShortDescription
+        </p>
+        
+            <FluentButton Appearance="Appearance.Accent" 
+                          Style="padding: 0.75rem 1.5rem; font-size: 1rem; min-width: 200px; display: flex; align-items: center; gap: 0.5rem;"
+                          OnClick="async () => await OpenProject()">
+                <FluentEmoji Emoji="Emojis.Symbols.Color.Default.RightArrow" />
+                <span>Visit Project</span>
+            </FluentButton>
+        </div>
+</FluentCard>
 
 @code {
-    
+    [Parameter, EditorRequired]
+    public PortfolioItem PortfolioItem { get; set; } = default!;
+
+    private async Task OpenProject()
+    {
+        if (PortfolioItem.ProjectLink is not null)
+        {
+            await Runtime.InvokeVoidAsync("window.open", PortfolioItem.ProjectLink.ToString(), "_blank");
+        }
+    }
 }

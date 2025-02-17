@@ -29,5 +29,14 @@
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DylanRidenSite.Domain\DylanRidenSite.Domain.csproj" />
+      <ProjectReference Include="..\DylanRidenSite.Web.Client.FakeDataClient\DylanRidenSite.Web.Client.FakeDataClient.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services\" />
+    </ItemGroup>
     
 </Project>
