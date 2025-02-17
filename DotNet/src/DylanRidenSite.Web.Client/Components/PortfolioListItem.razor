@@ -29,9 +29,6 @@
     
     private async Task OpenProject()
     {
-        if (PortfolioItem.ProjectLink is not null)
-        {
-            await Runtime.InvokeVoidAsync("window.open", PortfolioItem.ProjectLink.ToString(), "_blank");
-        }
+        await Runtime.InvokeVoidAsync("window.open", PortfolioItem.ProjectLink.ToString(), "_blank");
     }
 }
